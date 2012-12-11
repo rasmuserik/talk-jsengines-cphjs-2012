@@ -2,35 +2,43 @@
 
 Mindmap/notes:
 
-- Uses
-    - Browsers
-    - Scripting/server-side
-    - Embedded
-    - Dialects
-- Engines
-    - Closed source
-        - Chakra, JScript, ... (Microsoft)
-        - Carakan, Futhark, ... (Opera)
+
+- Intro
+    - Introduction
+        - Excuse to read up on JavaScript Engines
+        - Made yesterday night
+        - My background
+    - Overview of talk
+        - Intro to major open source JavaScript implementations
+        - Selected features
+        - Unselected implementations
+- Different implementations
     - v8
-    - SpiderMonkey (JägerMonkey, IonMonkey, 
-    - Java
-        - Rhino (Mozilla)
-        - Nashorn
-    - Webkit
-        - kjs
-        - JavaScriptCore (SquirrelFish, Nitro, ...)
-    - Others
-        - Narcissus
-    - Dialects
-        - ActionScript
-    - Others
-        - Unity...
-        - EJS
-        - LightScript
-- Engine optimisations
-    - Garbage collection (generational)
-    - Runtime "type classes"
-    - Trace trees
+        - Chrome
+        - node.js, CouchBase, ...
+        - Full compiler + optimising compiler
+    - JavaScriptCore
+        - Safari
+        - Qt 4.7+, ...
+        - LLIN, Baseline JIT, DFG JIT
+    - SpiderMonkey
+        - Firefox
+        - Adobe acrobat, CouchDB, MongoDB, ...
+        - Trace-(tracing), Jäger-, and  Ion-(ssa, current beta) -monkey
+    - Nashorn and Rhino
+        - JavaScript on Java (version 8 for Nashorn)
+        - Nashorn: not released yet, node.js-api-prototype
+        - piggybacking on JVM (jit, gc, etc.)
+- Selected features
+    - Generational Garbage Collection(v8, java) (on way for JSC, still mark'n'sweep for spidermonkey)
+    - Inline caches (nb: monomorphic)
+    - Unboxing
+    - Hidden classes / type inference (nb: object assignment order)
+    - Values: SMI(v8), NaN-boxing(spidermonkey+jsc) (or nun-boxing), Java-objects
+- Conclusion
+    - Summary
+    - Feedback welcome
+    - Questions?
 
 ## TODO
 
@@ -41,3 +49,6 @@ Mindmap/notes:
 ## Notes
 
 - most of the files (except index.html and readme) is the slideshow engine from https://github.com/hakimel/reveal.js/
+## Links
+
+- http://www.youtube.com/watch?v=kul3HO3WRgI
