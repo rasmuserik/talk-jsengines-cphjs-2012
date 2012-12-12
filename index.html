@@ -39,21 +39,19 @@
 
 				<section>
 					<h1 style="font-size: 350%">JavaScript Implementations</h1>
-					<p>
-                    <small><a href="http://copenhagenjs.dk">CopenhagenJS</a> talk by RasmusErik</small>
-					</p>
+                    <p> <small>12.12.12<br/><a href="http://copenhagenjs.dk">CopenhagenJS</a> talk by Rasmus Erik</small> </p>
 				</section>
 
 
                 <section>
                     <h3>The Talk</h3>
                     <ul>
-                        <li>Interactive - interrupt, ask questions</li>
-                        <li>Brush up on state of open source JavaScript engines</li>
+                        <li>Why: &nbsp; brush up on state of JavaScript engines</li>
+                        <li>How: &nbsp; interactive - interrupt, ask questions</li>
                     </ul>
                     <h3 style="margin-top: 2ex;">Rasmus Erik</h3>
                     <ul>
-                        <li>CS / Programming language geek, LightScript</li>
+                        <li>CS / programming language geek, LightScript</li>
                         <li>Work includes bugfixes in Rhino and SpiderMonkey</li>
                     </ul>
 				</section>
@@ -62,9 +60,18 @@
                     <h4>Outline</h4>
                     <h2>Major open source implementations</h2>
                     <!-- why these four -->
-                    (JavaScriptCore, v8, SpiderMonkey, Nashorn/Rhino)
+                    (SpiderMonkey, JavaScriptCore, v8, Nashorn/Rhino)
                     <h2 style="margin-top: 60px;">Selected engine features</h2>
                     (inline cache, hidden classes, values, gc)
+				</section>
+
+                <section>
+                    <h2>SpiderMonkey</h2>
+                    <ul>
+                        <li>JavaScript engine for Firefox</li>
+                        <li>Used in Adobe Acrobat, CouchDB, MongoDB, Riak, ...</li>
+                        <li>Trace-, Jäger-, and IonMonkey</li>
+                    </ul>
 				</section>
 
                 <section>
@@ -72,7 +79,7 @@
                     <ul>
                         <li>JavaScript engine for Safari</li>
                         <li>Used in Qt 4.7+, ...</li>
-                        <li>LLIN, Baseline JIT, DFG JIT</li>
+                        <li>Low-level interpreter, Baseline JIT, DFG JIT</li>
                     </ul>
 				</section>
 
@@ -82,15 +89,6 @@
                         <li>JavaScript engine for Chrome</li> <!-- history -->
                         <li>Used in node.js, CouchBase, ...</li> <!-- uses in general -->
                         <li>Full compiler, optimising compiler</li> <!-- about this specific compiler -->
-                    </ul>
-				</section>
-
-                <section>
-                    <h2>SpiderMonkey</h2>
-                    <ul>
-                        <li>JavaScript engine for Firefox</li>
-                        <li>Used in Adobe Acrobat, CouchDB, MongoDB, ...</li>
-                        <li>Trace-, Jäger-, and IonMonkey</li>
                     </ul>
 				</section>
 
@@ -106,7 +104,7 @@
                 <section>
                     <h4>Outline</h4>
                     <h2>Major open source implementations</h2>
-                    (JavaScriptCore, v8, SpiderMonkey, Nashorn/Rhino)
+                    (SpiderMonkey, JavaScriptCore, v8, Nashorn/Rhino)
                     <h2 style="margin-top: 60px;">Selected engine features</h2>
                     <!-- That matters! why -->
                     (inline cache, hidden classes, values, gc)
@@ -115,17 +113,17 @@
                 <section>
                     <h2>Inline cache</h2>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li>Same type at code</li>
+                        <li>Cache type information at execution point</li>
+                        <li>v8 fast monomorphic, SM PICs afaik, <br/>LLIN external, invoke dynamic</li>
+                        <li>Fast when same type at code</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Hidden classes / type inference</h2>
+                    <h2>Hidden classes and types</h2>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>Add property to object → change class</li>
+                        <li>Fast property access</li>
                         <li>Initialise objects in same order</li>
                     </ul>
                 </section>
@@ -133,27 +131,26 @@
                 <section>
                     <h2>Values and unboxing</h2>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>SMI (small int), v8</li>
+                        <li>NaN-boxing, JSC and SpiderMonkey</li>
+                        <li>Java objects, Rhino/Nashorn</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Generational Garbage Collection</h2>
                     <ul>
+                        <li>Young generation: copying GC. Older: mark'n'compact</li>
+                        <li>In v8 and JVM, not in JSC(on its way) or SpiderMonkey</li>
                         <li>Fast for shortlived objects</li>
-                        <li></li>
-                        <li></li>
                     </ul>
                 </section>
 
                 <section>
                     <h4>Outline</h4>
                     <h2>Major open source implementations</h2>
-                    (JavaScriptCore, v8, SpiderMonkey, Nashorn/Rhino)
+                    (SpiderMonkey, JavaScriptCore, v8, Nashorn/Rhino)
                     <h2 style="margin-top: 60px;">Selected engine features</h2>
-                    <!-- That matters! why -->
                     (inline cache, hidden classes, values, gc)
 				</section>
 
