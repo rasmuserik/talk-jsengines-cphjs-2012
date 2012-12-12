@@ -30,10 +30,10 @@ Mindmap/notes:
         - Nashorn: not released yet, node.js-api-prototype
         - piggybacking on JVM (jit, gc, (invokedynamic), etc.)
 - Selected features
-    - Generational Garbage Collection(v8, java) (on way for JSC, still mark'n'sweep for spidermonkey)
     - Inline caches (nb: monomorphic)
     - Hidden classes / type inference (nb: object assignment order)
     - Values: SMI(v8), NaN-boxing(spidermonkey+jsc) (or nun-boxing), Java-objects
+    - Generational Garbage Collection(v8, java) (on way for JSC, still mark'n'sweep for spidermonkey)
 - Conclusion
     - Summary
     - Feedback welcome
