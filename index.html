@@ -38,7 +38,7 @@
 			<div class="slides">
 
 				<section>
-					<h1>JavaScript Implementations</h1>
+					<h1 style="font-size: 350%">JavaScript Implementations</h1>
 					<p>
                     <small><a href="http://copenhagenjs.dk">CopenhagenJS</a> talk by RasmusErik</small>
 					</p>
@@ -46,76 +46,122 @@
 
 
                 <section>
-                    <section>
-                        <h3>Overview of the talk</h3>
-                        
-                        <ul>
-                            <li><strong>The Implementations</strong><ul>
-                                <li>Overview of major open source JavaScript implementations</li>
-                                <li>v8, JavaScriptCore, SpiderMonkey, Nashorn/Rhino</li>
-                            </ul></li>
-                            <li>Selected Engine Features <ul>
-                                <li>garbage collection</li>
-                                <li>inline cache</li>
-                                <li>hidden classes</li>
-                                <li>values</li>
-                            </ul></li>
-                        </ul>
-                    </section>
-                </section>
-                <section>
+                    <h3>The Talk</h3>
                     <ul>
-                        <li>Browsers</li>
-                        <li>Server-side</li>
-                        <li>Embedded</li>
-                        <li>Dialects</li>
+                        <li>Interactive - interrupt, ask questions</li>
+                        <li>Brush up on state of open source JavaScript engines</li>
+                    </ul>
+                    <h3 style="margin-top: 2ex;">Rasmus Erik</h3>
+                    <ul>
+                        <li>CS / Programming language geek, LightScript</li>
+                        <li>Work includes bugfixes in Rhino and SpiderMonkey</li>
                     </ul>
 				</section>
 
-				<section>
-					<section>
-						<h2>Generational garbage collection</h2>
-					</section>
-					<section>
-						<h2>Generations</h2>
-                        <p>Shortlived and longlived objects</p>
-					</section>
-					<section>
-						<h2>In v8</h2>
-                        <p>
-                            Two Generations
-                            <ul>
-                                <li>Shortlived - copying GC</li>
-                                <li>Longlived - compaction mark and sweep (as far as I recall)</li>
-                            </ul>
-                        </p>
-					</section>
-					<section>
-						<h2>Why it matters?</h2>
-						<p>Shortlived object allocation almost free</p>
-					</section>
+                <section>
+                    <h4>Outline</h4>
+                    <h2>Major open source implementations</h2>
+                    <!-- why these four -->
+                    (JavaScriptCore, v8, SpiderMonkey, Nashorn/Rhino)
+                    <h2 style="margin-top: 60px;">Selected engine features</h2>
+                    (inline cache, hidden classes, values, gc)
 				</section>
 
-				<section>
-                    <section>
-					<h2>Runtime classes</h2>
-					<p>
-					</p>
-                    </section>
-                    <section>
-						<h2>Why it matters?</h2>
+                <section>
+                    <h2>JavaScriptCore</h2>
+                    <ul>
+                        <li>JavaScript engine for Safari</li>
+                        <li>Used in Qt 4.7+, ...</li>
+                        <li>LLIN, Baseline JIT, DFG JIT</li>
+                    </ul>
+				</section>
+
+                <section>
+                    <h2>v8</h2>
+                    <ul>
+                        <li>JavaScript engine for Chrome</li> <!-- history -->
+                        <li>Used in node.js, CouchBase, ...</li> <!-- uses in general -->
+                        <li>Full compiler, optimising compiler</li> <!-- about this specific compiler -->
+                    </ul>
+				</section>
+
+                <section>
+                    <h2>SpiderMonkey</h2>
+                    <ul>
+                        <li>JavaScript engine for Firefox</li>
+                        <li>Used in Adobe Acrobat, CouchDB, MongoDB, ...</li>
+                        <li>Trace-, Jäger-, and IonMonkey</li>
+                    </ul>
+				</section>
+
+                <section>
+                        <h2>Nashorn/Rhino</h2>
                         <ul>
-                            <li>Order of object initialisation matters a lot for performance</li>
+                            <li>JavaScript engine for Java</li>
+                            <li>Used in Java-scripting, node.js-api in progress.</li>
+                            <li>Piggybacking on JVM (jit, gc, ...)</li>
                         </ul>
-                    </section>
 				</section>
 
-			    <section data-markdown>
-## Test
+                <section>
+                    <h4>Outline</h4>
+                    <h2>Major open source implementations</h2>
+                    (JavaScriptCore, v8, SpiderMonkey, Nashorn/Rhino)
+                    <h2 style="margin-top: 60px;">Selected engine features</h2>
+                    <!-- That matters! why -->
+                    (inline cache, hidden classes, values, gc)
+				</section>
 
-- foo
-- bar
-			    </section>
+                <section>
+                    <h2>Inline cache</h2>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li>Same type at code</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Hidden classes / type inference</h2>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li>Initialise objects in same order</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Values and unboxing</h2>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Generational Garbage Collection</h2>
+                    <ul>
+                        <li>Fast for shortlived objects</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>Outline</h4>
+                    <h2>Major open source implementations</h2>
+                    (JavaScriptCore, v8, SpiderMonkey, Nashorn/Rhino)
+                    <h2 style="margin-top: 60px;">Selected engine features</h2>
+                    <!-- That matters! why -->
+                    (inline cache, hidden classes, values, gc)
+				</section>
+
+                <section>
+                    <h2 style="margin-bottom: 4ex">Questions...</h2>
+                    <small>Feedback on presentation very welcome, <br/>
+                        Rasmus Erik <script>document.write("&#64;");</script> solsort.dk</small>
+                </section>
 
 			</div>
 
@@ -134,7 +180,7 @@
 				history: true,
 				center: true,
 
-				theme: "default", // Reveal.getQueryHash().theme, // available themes are in /css/theme
+				theme: "simple", //Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
 
 				// Optional libraries used to extend on reveal.js

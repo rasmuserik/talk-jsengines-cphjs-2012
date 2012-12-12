@@ -28,11 +28,10 @@ Mindmap/notes:
     - Nashorn and Rhino
         - JavaScript on Java (version 8 for Nashorn)
         - Nashorn: not released yet, node.js-api-prototype
-        - piggybacking on JVM (jit, gc, etc.)
+        - piggybacking on JVM (jit, gc, (invokedynamic), etc.)
 - Selected features
     - Generational Garbage Collection(v8, java) (on way for JSC, still mark'n'sweep for spidermonkey)
     - Inline caches (nb: monomorphic)
-    - Unboxing
     - Hidden classes / type inference (nb: object assignment order)
     - Values: SMI(v8), NaN-boxing(spidermonkey+jsc) (or nun-boxing), Java-objects
 - Conclusion
