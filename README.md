@@ -1,7 +1,39 @@
-# JavaScript Implementations (Presentation for [CopenhagenJS](http://copenhagenjs.dk))
+# Presentation at DBC 2013-03-08
 
-Online as slide show at http://solsort.com/2012/cphjs/
 
+## Mind map / preparation of presentation
+
+
+- indledning
+- DEMO: bibapp
+- linked data
+    - hvad: semantic web / linked data, subject-verb-noun tripler
+    - hvorfor: tilgængelige data, berigelse, søgemaskiner
+    - hvordan: unik url, semantisk opmarkering
+        - kunne kobles med bibliotek.dk, crawlbar (vs. dynamisk)
+- vores webservices
+    - rigt api
+    - ip-baseret adgangsstyring
+        - endte med scrape bibliotek.kk.dk for prototype, da det var lettere adgangsmæssigt.
+        - klient kræver proxy, biblioteker bygger egne proxy'er for at kunne bruge vores services!
+- moderne WS-adgangsstyring
+    - lettere adgang til, og accounting af, vores services
+    - opsamling af brugsmønstre for datamining
+    - oauth2 - github, facebook, google, microsoft, ...
+- mobil-grænseflade
+    - html5-app prototype - sætte mobil på agenda'en
+    - rigtig løsning: responsivt bibliotek.dk (nyligt proof of concept)
+- DEMO: bibdk-responsive
+- Konklusion / My opinion
+    - linked data: unik url til hver ting
+    - webservices: adgangsstyring med oauth2
+    - mobil: responsiv bibliotek.dk
+
+## Notes
+
+Start locally before show
+- bibdata
+- meteor/bibdk
 
 ----
 
