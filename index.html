@@ -1,98 +1,144 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
+    <head>
         <!-- Slide engine from https://github.com/hakimel/reveal.js/ -->
 
-		<meta charset="utf-8">
+        <meta charset="utf-8">
 
-		<title>JavaScript Implementations</title>
+        <title>JavaScript Implementations</title>
 
-		<meta name="description" content="">
-		<meta name="author" content="Rasmus Erik">
+        <meta name="description" content="">
+        <meta name="author" content="Rasmus Erik">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+        </style>
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
-		<div class="reveal">
+    <body>
+        <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
 
-				<section>
+                <section>
                 <h2>RJE eksperimenter</h2>
                 <p> <small>2013-03-08</small></p>
-				</section>
+                </section>
 
                 <section>
-                <h2>HTML5 biblioteks-app prototype</h2>
+                <h2>Indledning</h2>
                 <ul>
-                    <li>Linked data</li>
-                    <li>Single page app + crawlbare statiske sider</li>
-                    <li>Linked data</li>
-                    <li>Indblik i brug af vores webservices</li>
+                    <li>HTML5 mobil-app prototype</li>
+                    <li>Webservices - adgangsstyring</li>
+                    <li>Mobil - responsivt</li>
                 </ul>
                 </section>
                 <section>
-                <h2>HTML5 biblioteks-app prototype</h2>
+                <h2>HTML5 mobil-app prototype</h2>
                 <ul>
-                    <li>Linked data</li>
-                    <li>Single page app + crawlbare statiske sider</li>
-                    <li>Linked data</li>
-                    <li>Indblik i brug af vores webservices</li>
+                    <li>Eksperiment mellem jul og nytår, from scratch</li>
+                    <li>Mobil app single-page offline app prototype/proof-of-concept</li>
+                    <li>Semantisk opmarkering, unik url, crawlbar • linked data: subject-verb-noun triples, tilgængelige/berigelse/søgemaskiner, oclc<ul>
+                        <li>Kunne gøres i bibliotek.dk. + lod.dbc.dk-link</li>
+                    </ul></li>
+                </ul>
+                </section>
+                <section>
+                <h1>DEMO</h1>
+                <h3>HTML5 mobil-app prototype</h3>
+                </section>
+                <section>
+                <h2>Vores webservices</h2>
+                <ul>
+                    <li>Rigt api</li>
+                    <li>IP-baseret adgangsstyring <ul>
+                        <li>Endte med scrape bibliotek.kk.dk for prototype, da det var lettere adgangsmæssigt</li>
+                        <li>Klient kræver proxy, biblioteker bygger egne proxy'er for at kunne bruge vores services</li>
+                    </ul></li>
+                </ul>
+                </section>
+                <section>
+                <h2>Moderne WS-adgangsstyring</h2>
+                <ul>
+                    <li>Lettere adgang til, samt accounting af, vores webservices</li>
+                    <li>Bedre opsamling af brugsmønstre for data mining</li>
+                    <li>OAuth2 - github facebook google linkedin microsoft &amp;c</li>
+                </ul>
+                </section>
+                <section>
+                <h2>Mobil-grænseflade</h2>
+                <ul>
+                    <li>HTML5 app prototype: sætte mobil på agenda'en, kun proof-of-concept / eksempelkode</li>
+                    <li>Reponsivt bibliotek.dk vil være den rette løsning</li>
+                </ul>
+                </section>
+                <section>
+                <h1>DEMO</h1>
+                <h3>Responsivt bibdk mockup</h3>
+                </section>
+                <section>
+                <h2>Konklusion</h2>
+                <ul>
+                    <li>webservices - adgangsstyring med OAuth2</li>
+                    <li>eksperimenter - linked-data (unik-url, opmarkering)</li>
+                    <li>mobil - responsivt webdesign</li>
                 </ul>
                 </section>
 
-			</div>
+            </div>
 
-		</div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
 
-		<script>
+        <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
 
-				theme: "simple", //Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+                theme: "simple", //Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
 
-		</script>
+        </script>
 
-	</body>
+    </body>
 </html>
