@@ -14,8 +14,7 @@
 - vores webservices
     - rigt api
     - ip-baseret adgangsstyring
-        - endte med scrape bibliotek.kk.dk for prototype, da det var lettere adgangsmæssigt.
-        - klient kræver proxy, biblioteker bygger egne proxy'er for at kunne bruge vores services!
+    - klient kræver proxy, biblioteker bygger egne proxy'er for at kunne bruge vores services!
 - moderne WS-adgangsstyring
     - lettere adgang til, og accounting af, vores services
     - opsamling af brugsmønstre for datamining
