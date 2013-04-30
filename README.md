@@ -1,4 +1,4 @@
-# Presentation at DBC 2013-03-08
+# ![logo](https://solsort.com/_logo.png) Presentation at DBC 2013-03-08
 
 
 ## Mind map / preparation of presentation
